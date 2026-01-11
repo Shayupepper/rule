@@ -1,4 +1,4 @@
-// 2026-01-11 12:30
+// 2026-01-11 12:44
 
 /**
 // 示例#flag&out=zh
@@ -71,11 +71,8 @@ const FGF = inArg.fgf == undefined ? " " : decodeURI(inArg.fgf),
       outputName = nameMap[inArg.out] || "";
 
 const FG = ['🇦🇨','🇦🇩','🇦🇪','🇦🇫','🇦🇬','🇦🇮','🇦🇱','🇦🇲','🇦🇴','🇦🇶','🇦🇷','🇦🇸','🇦🇹','🇦🇺','🇦🇼','🇦🇽','🇦🇿','🇧🇦','🇧🇧','🇧🇩','🇧🇪','🇧🇫','🇧🇬','🇧🇭','🇧🇮','🇧🇯','🇧🇱','🇧🇲','🇧🇳','🇧🇴','🇧🇶','🇧🇷','🇧🇸','🇧🇹','🇧🇻','🇧🇼','🇧🇾','🇧🇿','🇨🇦','🇨🇨','🇨🇩','🇨🇫','🇨🇬','🇨🇭','🇨🇮','🇨🇰','🇨🇱','🇨🇲','🇨🇳','🇨🇴','🇨🇵','🇨🇷','🇨🇺','🇨🇻','🇨🇼','🇨🇽','🇨🇾','🇨🇿','🇩🇪','🇩🇬','🇩🇯','🇩🇰','🇩🇲','🇩🇴','🇩🇿','🇪🇦','🇪🇨','🇪🇪','🇪🇬','🇪🇭','🇪🇷','🇪🇸','🇪🇹','🇪🇺','🇫🇮','🇫🇯','🇫🇰','🇫🇲','🇫🇴','🇫🇷','🇬🇦','🇬🇧','🇬🇩','🇬🇪','🇬🇫','🇬🇬','🇬🇭','🇬🇮','🇬🇱','🇬🇲','🇬🇳','🇬🇵','🇬🇶','🇬🇷','🇬🇸','🇬🇹','🇬🇺','🇬🇼','🇬🇾','🇭🇰','🇭🇲','🇭🇳','🇭🇷','🇭🇹','🇭🇺','🇮🇨','🇮🇩','🇮🇪','🇮🇱','🇮🇲','🇮🇳','🇮🇴','🇮🇶','🇮🇷','🇮🇸','🇮🇹','🇯🇪','🇯🇲','🇯🇴','🇯🇵','🇰🇪','🇰🇬','🇰🇭','🇰🇮','🇰🇲','🇰🇳','🇰🇵','🇰🇷','🇰🇼','🇰🇾','🇰🇿','🇱🇦','🇱🇧','🇱🇨','🇱🇮','🇱🇰','🇱🇷','🇱🇸','🇱🇹','🇱🇺','🇱🇻','🇱🇾','🇲🇦','🇲🇨','🇲🇩','🇲🇪','🇲🇫','🇲🇬','🇲🇭','🇲🇰','🇲🇱','🇲🇲','🇲🇳','🇲🇴','🇲🇵','🇲🇶','🇲🇷','🇲🇸','🇲🇹','🇲🇺','🇲🇻','🇲🇼','🇲🇽','🇲🇾','🇲🇿','🇳🇦','🇳🇨','🇳🇪','🇳🇫','🇳🇬','🇳🇮','🇳🇱','🇳🇴','🇳🇵','🇳🇷','🇳🇺','🇳🇿','🇴🇲','🇵🇦','🇵🇪','🇵🇫','🇵🇬','🇵🇭','🇵🇰','🇵🇱','🇵🇲','🇵🇳','🇵🇷','🇵🇸','🇵🇹','🇵🇼','🇵🇾','🇶🇦','🇷🇪','🇷🇴','🇷🇸','🇷🇺','🇷🇼','🇸🇦','🇸🇧','🇸🇨','🇸🇩','🇸🇪','🇸🇬','🇸🇭','🇸🇮','🇸🇯','🇸🇰','🇸🇱','🇸🇲','🇸🇳','🇸🇴','🇸🇷','🇸🇸','🇸🇹','🇸🇻','🇸🇽','🇸🇾','🇸🇿','🇹🇦','🇹🇨','🇹🇩','🇹🇫','🇹🇬','🇹🇭','🇹🇯','🇹🇰','🇹🇱','🇹🇲','🇹🇳','🇹🇴','🇹🇷','🇹🇹','🇹🇻','🇨🇳','🇹🇿','🇺🇦','🇺🇬','🇺🇲','🇺🇸','🇺🇾','🇺🇿','🇻🇦','🇻🇨','🇻🇪','🇻🇬','🇻🇮','🇻🇳','🇻🇺','🇼🇫','🇼🇸','🇽🇰','🇾🇪','🇾🇹','🇿🇦','🇿🇲','🇿🇼'];
-
 const EN = ['AC','AD','AE','AF','AG','AI','AL','AM','AO','AQ','AR','AS','AT','AU','AW','AX','AZ','BA','BB','BD','BE','BF','BG','BH','BI','BJ','BL','BM','BN','BO','BQ','BR','BS','BT','BV','BW','BY','BZ','CA','CC','CD','CF','CG','CH','CI','CK','CL','CM','CN','CO','CP','CR','CU','CV','CW','CX','CY','CZ','DE','DG','DJ','DK','DM','DO','DZ','EA','EC','EE','EG','EH','ER','ES','ET','EU','FI','FJ','FK','FM','FO','FR','GA','GB','GD','GE','GF','GG','GH','GI','GL','GM','GN','GP','GQ','GR','GS','GT','GU','GW','GY','HK','HM','HN','HR','HT','HU','IC','ID','IE','IL','IM','IN','IO','IQ','IR','IS','IT','JE','JM','JO','JP','KE','KG','KH','KI','KM','KN','KP','KR','KW','KY','KZ','LA','LB','LC','LI','LK','LR','LS','LT','LU','LV','LY','MA','MC','MD','ME','MF','MG','MH','MK','ML','MM','MN','MO','MP','MQ','MR','MS','MT','MU','MV','MW','MX','MY','MZ','NA','NC','NE','NF','NG','NI','NL','NO','NP','NR','NU','NZ','OM','PA','PE','PF','PG','PH','PK','PL','PM','PN','PR','PS','PT','PW','PY','QA','RE','RO','RS','RU','RW','SA','SB','SC','SD','SE','SG','SH','SI','SJ','SK','SL','SM','SN','SO','SR','SS','ST','SV','SX','SY','SZ','TA','TC','TD','TF','TG','TH','TJ','TK','TL','TM','TN','TO','TR','TT','TV','TW','TZ','UA','UG','UM','US','UY','UZ','VA','VC','VE','VG','VI','VN','VU','WF','WS','XK','YE','YT','ZA','ZM','ZW'];
-
-const ZH = ['阿森松岛','安道尔','阿联酋','阿富汗','安提瓜','安圭拉','阿尔巴尼亚','亚美尼亚','安哥拉','南极','阿根廷','萨摩亚','奥地利','澳大利亚','阿鲁巴','奥兰群岛','阿赛拜疆','波黑','巴巴多斯','孟加拉','比利时','布基纳法索','保加利亚','巴林','布隆迪','贝宁','圣巴泰勒米','百慕大','文莱','玻利维亚','荷属加勒比','巴西','巴哈马','不丹','布韦岛','博茨瓦纳','白俄罗斯','伯利兹','加拿大','科科斯群岛','刚果(金)','中非','刚果(布)','瑞士','科特迪瓦','库克群岛','智利','喀麦隆','中国','哥伦比亚','克利珀顿岛','哥斯达黎加','古巴','佛得角','库拉索','圣诞岛','塞浦路斯','捷克','德国','迭戈加西亚','吉布提','丹麦','多米尼克','多米尼加','阿尔及利亚','休达和梅利利亚','厄瓜多尔','爱沙尼亚','埃及','西撒哈拉','厄立特里亚','西班牙','埃塞俄比亚','欧盟','芬兰','斐济','福克兰群岛','密克罗尼西亚','法罗群岛','法国','加蓬','英国','格林纳达','格鲁吉亚','法属圭亚那','根西岛','加纳','直布罗陀','格陵兰','冈比亚','几内亚','瓜德罗普','赤道几内亚','希腊','南乔治亚','危地马拉','关岛','几内亚比绍','圭亚那','香港','赫德岛','洪都拉斯','克罗地亚','海地','匈牙利','加那利群岛','印尼','爱尔兰','以色列','马恩岛','印度','英属印度洋领地','伊拉克','伊朗','冰岛','意大利','泽西岛','牙买加','约旦','日本','肯尼亚','吉尔吉斯','柬埔寨','基里巴斯','科摩罗','圣基茨和尼维斯','朝鲜','韩国','科威特','开曼群岛','哈萨克斯坦','老挝','黎巴嫩','圣卢西亚','列支敦士登','斯里兰卡','利比里亚','莱索托','立陶宛','卢森堡','拉脱维亚','利比亚','摩洛哥','摩纳哥','摩尔多瓦','黑山','法属圣马丁','马达加斯加','马绍尔','马其顿','马里','缅甸','蒙古','澳门','北马里亚纳','马提尼克','毛里塔尼亚','蒙特塞拉特','马耳他','毛里求斯','马尔代夫','马拉维','墨西哥','马来西亚','莫桑比克','纳米比亚','新喀里多尼亚','尼日尔','诺福克岛','尼日利亚','尼加拉瓜','荷兰','挪威','尼泊尔','瑙鲁','纽埃','新西兰','阿曼','巴拿马','秘鲁','法属波利尼西亚','巴布亚新几内亚','菲律宾','巴基斯坦','波兰','圣皮埃尔和密克隆','皮特凯恩','波多黎各','巴勒斯坦','葡萄牙','帕劳','巴拉圭','卡塔尔','留尼汪','罗马尼亚','塞尔维亚','俄罗斯','卢旺达','沙特阿拉伯','所罗门群岛','塞舌尔','苏丹','瑞典','新加坡','圣赫勒拿','斯洛文尼亚','斯瓦尔巴','斯洛伐克','塞拉利昂','圣马力诺','塞内加尔','索马里','苏里南','南苏丹','圣多美和普林西比','萨尔瓦多','荷属圣马丁','叙利亚','斯威士兰','特里斯坦-达库尼亚','特克斯和凯科斯','乍得','法属南部领地','多哥','泰国','塔吉克斯坦','托克劳','东帝汶','土库曼斯坦','突尼斯','汤加','土耳其','特立尼达和多巴哥','图瓦卢','台湾','坦桑尼亚','乌克兰','乌干达','美属本土外岛','美国','乌拉圭','乌兹别克','梵蒂冈','圣文森特','委内瑞拉','英属维京','美属维京','越南','瓦努阿图','瓦利斯和富图纳','萨摩亚','科索沃','也门','马约特','南非','赞比亚','津巴布韦'];
-
+const ZH = ['阿森松岛','安道尔','阿联酋','阿富汗','安提瓜','安圭拉','阿尔巴尼亚','亚美尼亚','安哥拉','南极','阿根廷','萨摩亚','奥地利','澳大利亚','阿鲁巴','奥兰群岛','阿塞拜疆','波黑','巴巴多斯','孟加拉','比利时','布基纳法索','保加利亚','巴林','布隆迪','贝宁','圣巴泰勒米','百慕大','文莱','玻利维亚','荷属加勒比','巴西','巴哈马','不丹','布韦岛','博茨瓦纳','白俄罗斯','伯利兹','加拿大','科科斯群岛','刚果(金)','中非','刚果(布)','瑞士','科特迪瓦','库克群岛','智利','喀麦隆','中国','哥伦比亚','克利珀顿岛','哥斯达黎加','古巴','佛得角','库拉索','圣诞岛','塞浦路斯','捷克','德国','迭戈加西亚','吉布提','丹麦','多米尼克','多米尼加','阿尔及利亚','休达和梅利利亚','厄瓜多尔','爱沙尼亚','埃及','西撒哈拉','厄立特里亚','西班牙','埃塞俄比亚','欧盟','芬兰','斐济','福克兰群岛','密克罗尼西亚','法罗群岛','法国','加蓬','英国','格林纳达','格鲁吉亚','法属圭亚那','根西岛','加纳','直布罗陀','格陵兰','冈比亚','几内亚','瓜德罗普','赤道几内亚','希腊','南乔治亚','危地马拉','关岛','几内亚比绍','圭亚那','香港','赫德岛','洪都拉斯','克罗地亚','海地','匈牙利','加那利群岛','印尼','爱尔兰','以色列','马恩岛','印度','英属印度洋领地','伊拉克','伊朗','冰岛','意大利','泽西岛','牙买加','约旦','日本','肯尼亚','吉尔吉斯','柬埔寨','基里巴斯','科摩罗','圣基茨和尼维斯','朝鲜','韩国','科威特','开曼群岛','哈萨克斯坦','老挝','黎巴嫩','圣卢西亚','列支敦士登','斯里兰卡','利比里亚','莱索托','立陶宛','卢森堡','拉脱维亚','利比亚','摩洛哥','摩纳哥','摩尔多瓦','黑山','法属圣马丁','马达加斯加','马绍尔','马其顿','马里','缅甸','蒙古','澳门','北马里亚纳','马提尼克','毛里塔尼亚','蒙特塞拉特','马耳他','毛里求斯','马尔代夫','马拉维','墨西哥','马来西亚','莫桑比克','纳米比亚','新喀里多尼亚','尼日尔','诺福克岛','尼日利亚','尼加拉瓜','荷兰','挪威','尼泊尔','瑙鲁','纽埃','新西兰','阿曼','巴拿马','秘鲁','法属波利尼西亚','巴布亚新几内亚','菲律宾','巴基斯坦','波兰','圣皮埃尔和密克隆','皮特凯恩','波多黎各','巴勒斯坦','葡萄牙','帕劳','巴拉圭','卡塔尔','留尼汪','罗马尼亚','塞尔维亚','俄罗斯','卢旺达','沙特阿拉伯','所罗门群岛','塞舌尔','苏丹','瑞典','新加坡','圣赫勒拿','斯洛文尼亚','斯瓦尔巴','斯洛伐克','塞拉利昂','圣马力诺','塞内加尔','索马里','苏里南','南苏丹','圣多美和普林西比','萨尔瓦多','荷属圣马丁','叙利亚','斯威士兰','特里斯坦-达库尼亚','特克斯和凯科斯','乍得','法属南部领地','多哥','泰国','塔吉克斯坦','托克劳','东帝汶','土库曼斯坦','突尼斯','汤加','土耳其','特立尼达和多巴哥','图瓦卢','台湾','坦桑尼亚','乌克兰','乌干达','美属本土外岛','美国','乌拉圭','乌兹别克','梵蒂冈','圣文森特','委内瑞拉','英属维京','美属维京','越南','瓦努阿图','瓦利斯和富图纳','萨摩亚','科索沃','也门','马约特','南非','赞比亚','津巴布韦'];
 const QC = ['Ascension Island','Andorra','United Arab Emirates','Afghanistan','Antigua and Barbuda','Anguilla','Albania','Armenia','Angola','Antarctica','Argentina','American Samoa','Austria','Australia','Aruba','Åland Islands','Azerbaijan','Bosnia and Herzegovina','Barbados','Bangladesh','Belgium','Burkina Faso','Bulgaria','Bahrain','Burundi','Benin','Saint Barthélemy','Bermuda','Brunei','Bolivia','Bonaire','Brazil','Bahamas','Bhutan','Bouvet Island','Botswana','Belarus','Belize','Canada','Cocos Islands','Congo-Kinshasa','Central African Republic','Congo-Brazzaville','Switzerland','Ivory Coast','Cook Islands','Chile','Cameroon','China','Colombia','Clipperton Island','Costa Rica','Cuba','Cape Verde','Curaçao','Christmas Island','Cyprus','Czech Republic','Germany','Diego Garcia','Djibouti','Denmark','Dominica','Dominican Republic','Algeria','Ceuta & Melilla','Ecuador','Estonia','Egypt','Western Sahara','Eritrea','Spain','Ethiopia','European Union','Finland','Fiji','Falkland Islands','Micronesia','Faroe Islands','France','Gabon','United Kingdom','Grenada','Georgia','French Guiana','Guernsey','Ghana','Gibraltar','Greenland','Gambia','Guinea','Guadeloupe','Equatorial Guinea','Greece','South Georgia','Guatemala','Guam','Guinea-Bissau','Guyana','Hong Kong','Heard Island','Honduras','Croatia','Haiti','Hungary','Canary Islands','Indonesia','Ireland','Israel','Isle of Man','India','British Indian Ocean Territory','Iraq','Iran','Iceland','Italy','Jersey','Jamaica','Jordan','Japan','Kenya','Kyrgyzstan','Cambodia','Kiribati','Comoros','Saint Kitts and Nevis','North Korea','South Korea','Kuwait','Cayman Islands','Kazakhstan','Laos','Lebanon','Saint Lucia','Liechtenstein','Sri Lanka','Liberia','Lesotho','Lithuania','Luxembourg','Latvia','Libya','Morocco','Monaco','Moldova','Montenegro','Saint Martin','Madagascar','Marshall Islands','North Macedonia','Mali','Myanmar','Mongolia','Macau','Northern Mariana Islands','Martinique','Mauritania','Montserrat','Malta','Mauritius','Maldives','Malawi','Mexico','Malaysia','Mozambique','Namibia','New Caledonia','Niger','Norfolk Island','Nigeria','Nicaragua','Netherlands','Norway','Nepal','Nauru','Niue','New Zealand','Oman','Panama','Peru','French Polynesia','Papua New Guinea','Philippines','Pakistan','Poland','Saint Pierre and Miquelon','Pitcairn Islands','Puerto Rico','Palestine','Portugal','Palau','Paraguay','Qatar','Réunion','Romania','Serbia','Russia','Rwanda','Saudi Arabia','Solomon Islands','Seychelles','Sudan','Sweden','Singapore','Saint Helena','Slovenia','Svalbard and Jan Mayen','Slovakia','Sierra Leone','San Marino','Senegal','Somalia','Suriname','South Sudan','São Tomé and Príncipe','El Salvador','Sint Maarten','Syria','Eswatini','Tristan da Cunha','Turks and Caicos Islands','Chad','French Southern Territories','Togo','Thailand','Tajikistan','Tokelau','Timor-Leste','Turkmenistan','Tunisia','Tonga','Turkey','Trinidad and Tobago','Tuvalu','Taiwan','Tanzania','Ukraine','Uganda','U.S. Outlying Islands','United States','Uruguay','Uzbekistan','Vatican City','Saint Vincent','Venezuela','British Virgin Islands','U.S. Virgin Islands','Vietnam','Vanuatu','Wallis and Futuna','Samoa','Kosovo','Yemen','Mayotte','South Africa','Zambia','Zimbabwe'];
 
 const specialRegex = [
@@ -106,34 +103,23 @@ const rurekey = {
   "United Kingdom London": /London|Great Britain/g,
   "Taiwan TW 台湾 ": /(台|Tai\s?wan|TW).*?|.*?(台|Tai\s?wan|TW)/g,
   "United States": /USA|Los Angeles|San Jose|Silicon Valley|Michigan/g,
-  澳大利亚: /澳洲|墨尔本|悉尼|土澳|(深|沪|呼|京|广|杭)澳/g,
-  德国: /(深|沪|呼|京|广|杭)德|法兰克福|滬德/g,
-  香港: /(深|沪|呼|京|广|杭)港/g,
+  澳大利亚: /澳洲|墨尔本|悉尼|土澳/g,
+  德国: /法兰克福/g,
   台湾: /新台|新北|台(?!.*线)/g,
-  Taiwan: /Taipei/g,
-  日本: /(深|沪|呼|京|广|杭|中|辽)日|东京|大坂/g,
-  新加坡: /狮城|(深|沪|呼|京|广|杭)新/g,
-  美国: /(深|沪|呼|京|广|杭)美|波特兰|芝加哥|哥伦布|纽约|硅谷|俄勒冈|西雅图|芝加哥/g,
-  韩国: /春川|韩|首尔/g,
-  Japan: /Tokyo|Osaka/g,
+  日本: /东京|大坂/g,
+  新加坡: /狮城/g,
+  美国: /波特兰|芝加哥|哥伦布|纽约|硅谷|俄勒冈|西雅图/g,
+  韩国: /春川|首尔/g,
   英国: /伦敦/g,
-  India: /Mumbai/g,
-  Germany: /Frankfurt/g,
-  Switzerland: /Zurich/g,
   俄罗斯: /莫斯科/g,
   土耳其: /伊斯坦布尔/g,
-  泰国: /泰國|曼谷/g,
+  泰国: /曼谷/g,
   法国: /巴黎/g,
-  波斯尼亚和黑塞哥维那: /波黑共和国/g,
-  印尼: /印度尼西亚|雅加达/g,
+  印尼: /雅加达/g,
   印度: /孟买/g,
-  孟加拉国: /孟加拉/g,
-  捷克: /捷克共和国/g,
-  阿联酋: /(🇦🇪|阿联酋|迪拜|UAE|United\s*Arab\s*Emirates|Dubai)/gi,
-  沙特阿拉伯: /(🇸🇦|沙特|沙特阿拉伯|Saudi\s*Arabia|KSA|\bSTC\b)/gi,
+  阿联酋: /迪拜/gi,
+  沙特阿拉伯: /利雅得/gi,
   家宽: /家庭宽带|家庭|住宅/g,
-  G: /\d\s?GB/gi,
-  Esnc: /esnc/gi,
 };
 
 let GetK = false, AMK = [];
@@ -216,11 +202,6 @@ function operator(pro) {
       }
     });
 
-    const _hadShenGang = /(深|沪|呼|京|广|杭)港/.test(ens) || /(深|沪|呼|京|广|杭)港/.test(e.name);
-    if (_hadShenGang) {
-      e.name = e.name.replace(/(深|沪|呼|京|广|杭)港/gi, "香港");
-    }
-
     if (blockquic == "on") e["block-quic"]="on";
     else if (blockquic == "off") e["block-quic"]="off";
     else delete e["block-quic"];
@@ -273,7 +254,6 @@ function operator(pro) {
   jxh(pro);
   if (numone) oneP(pro);
   if (blpx) pro = fampx(pro);
-  if (key) pro = pro.filter((e) => !keyb.test(e.name));
   return pro;
 }
 
