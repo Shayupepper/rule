@@ -1,4 +1,4 @@
-// 2026-02-25 21:47
+// 2026-02-25 21:51
 
 const inArg = $arguments;
 const boolArg = (v, d = false) => {
@@ -12,7 +12,7 @@ const config = {
   fgf:   inArg.fgf ? decodeURI(inArg.fgf) : " ",
 };
 
-const RE_CLEAR = /(GB|TB|免费|套餐|到期|剩余|过期|测试|官网|订阅|流量|机场|联系|客服|有效|重置|网站|地址)/i;
+const RE_CLEAR = /(GB|TB|TG|频道|免费|套餐|到期|剩余|过期|测试|官网|订阅|流量|机场|联系|客服|有效|重置|网站|地址)/i;
 const RE_HOME = /(家宽|住宅|ISP|Home|Residential)/i;
 
 const REGIONS = [
