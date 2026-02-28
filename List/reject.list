@@ -1,4 +1,4 @@
-// 2025-02-17 08:14
+// 2026-02-28 10:49
 
 DOMAIN-KEYWORD,-ad.video.yximgs.com
 DOMAIN-KEYWORD,-be-pack-sign.pglstatp-toutiao.com
@@ -36,18 +36,18 @@ DOMAIN-SUFFIX,adcdn.tencentmusic.com
 DOMAIN-SUFFIX,adcdn6.tencentmusic.com
 DOMAIN-SUFFIX,adclick.tencentmusic.com
 DOMAIN-SUFFIX,addata.jd.com
+DOMAIN-SUFFIX,addons-pa.googleapis.com
 DOMAIN-SUFFIX,ads.google.cn
 DOMAIN-SUFFIX,ads.service.kugou.com
 DOMAIN-SUFFIX,ads.uutest.cn
-DOMAIN-SUFFIX,adscdn.baidu.com
+DOMAIN-SUFFIX,adscope.com
+DOMAIN-SUFFIX,adscope.com.cn
 DOMAIN-SUFFIX,adsense.google.cn
 DOMAIN-SUFFIX,adservice.google.com
 DOMAIN-SUFFIX,adserviceretry.kugou.com
 DOMAIN-SUFFIX,adsfile.bssdlbig.kugou.com
 DOMAIN-SUFFIX,adsmind.ugdtimg.com
 DOMAIN-SUFFIX,adsp.xunlei.com
-DOMAIN-SUFFIX,adscope.com
-DOMAIN-SUFFIX,adscope.com.cn
 DOMAIN-SUFFIX,adstats.tencentmusic.com
 DOMAIN-SUFFIX,adui.tg.meitu.com
 DOMAIN-SUFFIX,advertising-api.amazon.com
@@ -65,6 +65,7 @@ DOMAIN-SUFFIX,alog.umeng.com
 DOMAIN-SUFFIX,alogus.umeng.com
 DOMAIN-SUFFIX,amap-aos-info-nogw.amap.com
 DOMAIN-SUFFIX,amdcopen.m.taobao.com
+DOMAIN-SUFFIX,amazon-adsystem.com
 DOMAIN-SUFFIX,anva.org.cn
 DOMAIN-SUFFIX,anythinktech.com
 DOMAIN-SUFFIX,api.anythinktech.com
