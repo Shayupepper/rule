@@ -1,4 +1,4 @@
-// 2026-03-14 15:59
+// 2026-03-14 20:15
 
 DOMAIN,ad.12306.cn
 DOMAIN,apidns-js.kwd.inkuai.com
@@ -72,6 +72,7 @@ DOMAIN-SUFFIX,pos.baidu.com
 DOMAIN-SUFFIX,resolver.gslb.mi-idc.com
 DOMAIN-SUFFIX,rmhfrtnd.com
 DOMAIN-SUFFIX,rubiconproject.com
+DOMAIN-SUFFIX,stripchat.com
 DOMAIN-SUFFIX,svd-cdn.com
 DOMAIN-SUFFIX,trackwilltrk.com
 DOMAIN-SUFFIX,tsyndicate.com
@@ -113,7 +114,6 @@ DOMAIN-KEYWORD,doubleclick.
 DOMAIN-KEYWORD,lum-sdk
 DOMAIN-KEYWORD,luminati
 DOMAIN-KEYWORD,pangolin-sdk-toutiao
-DOMAIN-KEYWORD,stripchat
 DOMAIN-KEYWORD,umeng
 
 DOMAIN-WILDCARD,*ad*.youku.com
