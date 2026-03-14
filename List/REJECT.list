@@ -1,4 +1,4 @@
-// 2026-03-14 23:29
+// 2026-03-14 23:59
 
 DOMAIN,ad.12306.cn
 DOMAIN,apidns-js.kwd.inkuai.com
@@ -64,8 +64,6 @@ DOMAIN-SUFFIX,open.e.kuaishou.cn
 DOMAIN-SUFFIX,open.e.kuaishou.com
 DOMAIN-SUFFIX,open.kuaishouzt.com
 DOMAIN-SUFFIX,openx.net
-DOMAIN-SUFFIX,pgdt.gtimg.cn
-DOMAIN-SUFFIX,pgdt.gtimg.com
 DOMAIN-SUFFIX,phloxsub73ulata.com
 DOMAIN-SUFFIX,pitrespite.com
 DOMAIN-SUFFIX,pos.baidu.com
@@ -99,7 +97,6 @@ DOMAIN-KEYWORD,-ulog.ksapisrv.com
 DOMAIN-KEYWORD,-ulog.kwai-pro.com
 DOMAIN-KEYWORD,-ulogl2.kwai-pro.com
 DOMAIN-KEYWORD,_vmind.qqvideo.tc.qq.com
-DOMAIN-KEYWORD,adjust
 DOMAIN-KEYWORD,admaster
 DOMAIN-KEYWORD,admob
 DOMAIN-KEYWORD,adserver
@@ -108,11 +105,13 @@ DOMAIN-KEYWORD,adsdk
 DOMAIN-KEYWORD,adsmind
 DOMAIN-KEYWORD,adsyndication
 DOMAIN-KEYWORD,adtianmai
+DOMAIN-KEYWORD,adjust
 DOMAIN-KEYWORD,anythinktech
 DOMAIN-KEYWORD,appsflyer
 DOMAIN-KEYWORD,bright-sdk
 DOMAIN-KEYWORD,brightdata
 DOMAIN-KEYWORD,doubleclick
+DOMAIN-KEYWORD,gdtimg
 DOMAIN-KEYWORD,lum-sdk
 DOMAIN-KEYWORD,luminati
 DOMAIN-KEYWORD,pangolin-sdk-toutiao
