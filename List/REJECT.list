@@ -1,4 +1,4 @@
-// 2026-03-15 00:47
+// 2026-03-15 09:02
 
 DOMAIN,ad.12306.cn
 DOMAIN,apidns-js.kwd.inkuai.com
@@ -115,13 +115,12 @@ DOMAIN-KEYWORD,umeng
 
 DOMAIN-WILDCARD,*ad*.y.qq.com
 DOMAIN-WILDCARD,*ad*.youku.com
-DOMAIN-WILDCARD,ad*.taobao.com
+DOMAIN-WILDCARD,*ad*.taobao.com
 DOMAIN-WILDCARD,ad*.tencentmusic.com
 DOMAIN-WILDCARD,ad*.zijieapi.com
 DOMAIN-WILDCARD,ads-*.tiktok.com
 DOMAIN-WILDCARD,ads-*.xhscdn.com
 DOMAIN-WILDCARD,api-*.8ziben.com
-DOMAIN-WILDCARD,h-ad*.taobao.com
 DOMAIN-WILDCARD,log*-normal-*.tiktokv.com
 DOMAIN-WILDCARD,mon-*.byteoversea.com
 DOMAIN-WILDCARD,tnc*.zijieapi.com
