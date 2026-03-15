@@ -1,4 +1,4 @@
-// 2026-03-15 09:02
+// 2026-03-15 09:26
 
 DOMAIN,ad.12306.cn
 DOMAIN,apidns-js.kwd.inkuai.com
@@ -64,6 +64,8 @@ DOMAIN-SUFFIX,open.e.kuaishou.cn
 DOMAIN-SUFFIX,open.e.kuaishou.com
 DOMAIN-SUFFIX,open.kuaishouzt.com
 DOMAIN-SUFFIX,openx.net
+DOMAIN-SUFFIX,pgdt.gtimg.cn
+DOMAIN-SUFFIX,pgdt.ugdtimg.com
 DOMAIN-SUFFIX,phloxsub73ulata.com
 DOMAIN-SUFFIX,pitrespite.com
 DOMAIN-SUFFIX,pos.baidu.com
@@ -106,14 +108,11 @@ DOMAIN-KEYWORD,appsflyer
 DOMAIN-KEYWORD,bright-sdk
 DOMAIN-KEYWORD,brightdata
 DOMAIN-KEYWORD,doubleclick
-DOMAIN-KEYWORD,gdtimg
-DOMAIN-KEYWORD,gtimg
 DOMAIN-KEYWORD,lum-sdk
 DOMAIN-KEYWORD,luminati
 DOMAIN-KEYWORD,pangolin-sdk-toutiao
 DOMAIN-KEYWORD,umeng
 
-DOMAIN-WILDCARD,*ad*.y.qq.com
 DOMAIN-WILDCARD,*ad*.youku.com
 DOMAIN-WILDCARD,*ad*.taobao.com
 DOMAIN-WILDCARD,ad*.tencentmusic.com
@@ -124,3 +123,4 @@ DOMAIN-WILDCARD,api-*.8ziben.com
 DOMAIN-WILDCARD,log*-normal-*.tiktokv.com
 DOMAIN-WILDCARD,mon-*.byteoversea.com
 DOMAIN-WILDCARD,tnc*.zijieapi.com
+DOMAIN-WILDCARD,tmead*.y.qq.com
