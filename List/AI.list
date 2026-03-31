@@ -1,4 +1,4 @@
-// 2026-03-31 15:07
+// 2026-03-31 17:34
 
 DOMAIN,apple-relay.apple.com
 DOMAIN,apple-relay.cloudflare.com
@@ -7,6 +7,12 @@ DOMAIN,cp4.cloudflare.com
 DOMAIN,gspe1-ssl.ls.apple.com
 DOMAIN,guzzoni.apple.com
 DOMAIN-SUFFIX,smoot.apple.com
+
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,clau.de
+DOMAIN-SUFFIX,claudeusercontent.com
 
 DOMAIN,chatgpt.livekit.cloud
 DOMAIN,host.livekit.cloud
@@ -22,20 +28,17 @@ DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,sora.com
 DOMAIN-SUFFIX,turn.livekit.cloud
 
-DOMAIN,ai.google.dev
-DOMAIN,aida.googleapis.com
-DOMAIN,aistudio.google.com
-DOMAIN,alkalicore-pa.clients6.google.com
-DOMAIN,alkalimakersuite-pa.clients6.google.com
-DOMAIN,bard.google.com
-DOMAIN,deepmind.com
-DOMAIN,deepmind.google
-DOMAIN,geller-pa.googleapis.com
-DOMAIN,gemini.google.com
-DOMAIN,generativeai.google
-DOMAIN,generativelanguage.googleapis.com
-DOMAIN,makersuite.google.com
-DOMAIN,proactivebackend-pa.googleapis.com
+DOMAIN-SUFFIX,ai.google.dev
+DOMAIN-SUFFIX,aistudio.google.com
+DOMAIN-SUFFIX,bard.google.com
+DOMAIN-SUFFIX,deepmind.com
+DOMAIN-SUFFIX,deepmind.google
+DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,generativeai.google
+DOMAIN-SUFFIX,generativelanguage.googleapis.com
+DOMAIN-SUFFIX,makersuite.google.com
+DOMAIN-KEYWORD,-pa.clients6.google.com
+DOMAIN-KEYWORD,-pa.googleapis.com
 
 DOMAIN,api.x.ai
 DOMAIN-SUFFIX,grok.com
