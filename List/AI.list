@@ -1,4 +1,4 @@
-// 2026-04-03 11:12
+// 2026-04-03 15:20
 
 DOMAIN,apple-relay.apple.com
 DOMAIN,apple-relay.cloudflare.com
@@ -35,9 +35,7 @@ DOMAIN-SUFFIX,deepmind.com
 DOMAIN-SUFFIX,deepmind.google
 DOMAIN-SUFFIX,gemini.google.com
 DOMAIN-SUFFIX,generativeai.google
-DOMAIN-SUFFIX,generativelanguage.googleapis.com
 DOMAIN-SUFFIX,makersuite.google.com
-DOMAIN-KEYWORD,-pa.clients6.google.com
 DOMAIN-KEYWORD,googleapis
 
 DOMAIN,api.x.ai
