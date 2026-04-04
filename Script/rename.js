@@ -1,4 +1,4 @@
-// 2024-12-09 20:32
+// 2026-04-04 12:14
 
 const inArg = $arguments;
 const boolArg = (v, d = false) => {
@@ -12,7 +12,7 @@ const config = {
   fgf:   inArg.fgf ? decodeURI(inArg.fgf) : " ",
 };
 
-const RE_CLEAR = /(.com|test|频道|免费|套餐|到期|剩余|访问|续费|魔法|上网|下载|救急|过期|域名|测试|标记|官网|订阅|节点|流量|机场|联系|客服|有效|重置|网站|地址|客户端|防失联|邮箱|公告|维护|入群|进群|通知|官网|重置)/i;
+const RE_CLEAR = /(.com|网址|Traffic|Expire|续费|到期|剩余|魔法|订阅|流量|机场|客户端|下载|有效|防失联|公告|加群|通知|频道)/i;
 const RE_HOME = /(家宽|住宅|ISP|Home|Residential)/i;
 
 const REGIONS = [
