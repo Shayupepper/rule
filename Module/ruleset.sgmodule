@@ -1,0 +1,81 @@
+#!name=规则集
+#!desc=规则集
+#!system=ios
+#!updatetime=2025-10-09 09:46
+
+[Body Rewrite]
+// 哔哩哔哩 - api.live.bilibili.com, app.bilibili.com
+http-response-jq ^https:\/\/api\.live\.bilibili\.com\/xlive\/(?:app-interface\/v2\/index\/feed|app-room\/v1\/index\/getInfoBy(?:Room|User))\? '.data |= (... | reduce ([["show_reserve_status"], false], [["reserve_info", "show_reserve_status"], false] ...) as [$path, $value] (.; if getpath($path) then setpath($path; $value) end))'
+http-response-jq ^https:\/\/app\.bilibili\.com\/x\/v2\/search\/square\? '.data = []'
+http-response-jq ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/mine(?:\/ipad)?\? '.data |= (     del(.answer, .live_tip, .vip_section, .vip_section_v2, .modular_vip_section) |      .vip_type = 2 |      .vip |= if . != null and .status == 0          then . + { status: 1, type: 2, due_date: 9005270400000, role: 15 }         else .      end |      if .sections_v2 then .sections_v2 =          [             {                 "items": [                     {                         "id": 396,                         "title": "离线缓存",                         "uri": "bilibili://user_center/download",                         "icon": "http://i0.hdslb.com/bfs/archive/5fc84565ab73e716d20cd2f65e0e1de9495d56f8.png",                         "common_op_item": {}                     },                     {                         "id": 397,                         "title": "历史记录",                         "uri": "bilibili://user_center/history",                         "icon": "http://i0.hdslb.com/bfs/archive/8385323c6acde52e9cd52514ae13c8b9481c1a16.png",                         "common_op_item": {}                     },                     {                         "id": 3072,                         "title": "我的收藏",                         "uri": "bilibili://user_center/favourite",                         "icon": "http://i0.hdslb.com/bfs/archive/d79b19d983067a1b91614e830a7100c05204a821.png",                         "common_op_item": {}                     },                     {                         "id": 2830,                         "title": "稍后再看",                         "uri": "bilibili://user_center/watch_later_v2",                         "icon": "http://i0.hdslb.com/bfs/archive/63bb768caa02a68cb566a838f6f2415f0d1d02d6.png",                         "need_login": 1,                         "common_op_item": {}                     }                 ],                 "style": 1,                 "button": {}             },             {                 "title": "推荐服务",                 "items": [                     {                         "id": 402,                         "title": "个性装扮",                         "uri": "https://www.bilibili.com/h5/mall/home?navhide=1&f_source=shop&from=myservice",                         "icon": "http://i0.hdslb.com/bfs/archive/0bcad10661b50f583969b5a188c12e5f0731628c.png",                         "common_op_item": {}                     },                     {                         "id": 622,                         "title": "会员购",                         "uri": "bilibili://mall/home",                         "icon": "http://i0.hdslb.com/bfs/archive/19c794f01def1a267b894be84427d6a8f67081a9.png",                         "common_op_item": {}                     },                     {                         "id": 404,                         "title": "我的钱包",                         "uri": "bilibili://bilipay/mine_wallet",                         "icon": "http://i0.hdslb.com/bfs/archive/f416634e361824e74a855332b6ff14e2e7c2e082.png",                         "common_op_item": {}                     },                     {                         "id": 406,                         "title": "我的直播",                         "uri": "bilibili://user_center/live_center",                         "icon": "http://i0.hdslb.com/bfs/archive/1db5791746a0112890b77a0236baf263d71ecb27.png",                         "common_op_item": {},                     }                 ],                 "style": 1,                 "button": {}             },             {                 "title": "更多服务",                 "items": [                     {                         "id": 407,                         "title": "联系客服",                         "uri": "bilibili://user_center/feedback",                         "icon": "http://i0.hdslb.com/bfs/archive/7ca840cf1d887a45ee1ef441ab57845bf26ef5fa.png",                         "common_op_item": {}                     },                     {                         "id": 410,                         "title": "设置",                         "uri": "bilibili://user_center/setting",                         "icon": "http://i0.hdslb.com/bfs/archive/e932404f2ee62e075a772920019e9fbdb4b5656a.png",                         "common_op_item": {}                     }                 ],                 "style": 2,                 "button": {}             }         ]     end )'
+http-response-jq ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\? '.data.vip |= if . != null and .status == 0 then . + { status: 1, type: 2, due_date: 9005270400000, role: 15 } else . end'
+
+// 滴滴出行 - 112.53.55.225, 113.46.225.*, 116.85.*, 120.241.142.*, 120.241.143.*, 123.207.209.*, 139.199.240.84, 162.14.157.*, api.udache.com, As.xiaojukeji.com, common.diditaxi.com.cn, conf.diditaxi.com.cn, ct.xiaojukeji.com, lion.didialift.com, res.xiaojukeji.com
+http-response-jq ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/core\? '.data.disorder_cards.bottom_nav_list.data |= map(select(.id == "home_page" or .id == "user_center")) | .data.order_cards.nav_list_card.data |= map(select(.nav_id == "dache_anycar" or .nav_id == "carmate" or .nav_id == "driverservice" or .nav_id == "zhandianbashi" or .nav_id == "bike" or .nav_id == "special_ride" or .nav_id == "nav_more_v3"))'
+http-response-jq ^https:\/\/common\.diditaxi\.com\.cn\/common\/v5\/usercenter\/layout$ '.data |= (.instances |= (to_entries | map(select(.key as $k | ["center_base_info_card", "center_order_related_card", "center_wallet_finance_card"] | index($k))) | from_entries)) | .data.instances.center_wallet_finance_card.data.view_info |= map(select(.title == "优惠卡券" or .title == "我的钱包"))'
+http-response-jq ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/other\/fast\? 'delpaths([["data","disorder_cards","communicate_card"], ["data","disorder_cards","not_login_bottom_bar"], ["data","disorder_cards","riding_code_card"], ["data","order_cards","car_owner_widget_card"], ["data","order_cards","marketing_card"], ["data","order_cards","super_banner_card"], ["data","disorder_cards","car_icon","data","icon_info_new_agreement"]])'
+http-response-jq ^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget\? 'delpaths([["data","mult_home_banner"]])'
+http-response-jq ^https:\/\/api\.udache\.com\/gulfstream\/porsche\/v1\/dache_homepage_layout\? '.data |= (.instances |= (to_entries | map(select(.key | test("feed_back_|dache_main_member|order_container_|dache_main_core_icon|dache_main_card_"))) | from_entries))'
+http-response-jq ^https:\/\/api\.udache\.com\/gulfstream\/porsche\/v1\/pSFCHomePage\? '.data |= (if . == null then null else {hot_route_info, legal_info} end) | . as $root | .data.tab_list = ($root.data.tab_list | map(select(.tab_id == "passenger")))'
+http-response-jq ^https:\/\/daijia\.kuaidadi\.com:443\/gateway\? 'delpaths([["data","variantInfo"]]) | .data |= with_entries(select(.value.isAd != 1))'
+http-response-jq ^https:\/\/api\.udache\.com\/intercity\/ticket\/api\/v1\/core\/getFullPageInfoLayout\? '.data.disorder_components |= (map(select(.name == "history_order_card" or .name == "inprogress_order_card" or .name == "station_calendar" or .name == "main_card_v2" or .name == "user_history_order")))'
+http-response-jq ^https:\/\/htwkop\.xiaojukeji\.com:443\/gateway\? 'delpaths([["data","didi-bike-homepage-popup"], ["data","variantInfo"]])'
+http-response-jq ^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\? '.data |= map(if .name|IN("daijia_journey_new_tcp_switch","daijia_tcp_init","daijia_tcp_msg_encrypt","daijia_tcp_site_info","daijia_tcp_site_report")then.allow=false else. end)'
+
+// ITdog - www.itdog.cn
+http-response ^https?:\/\/www\.itdog\.cn\/ 'gg_link' 'gg_link" style="display:none;"' '<div style="display: inline-flex;" class="gg_link"' '<div style="display:none;"'
+
+// 小红书 - edith.xiaohongshu.com,so.xiaohongshu.com, rec.xiaohongshu.com
+http-response-jq ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/search\/hot_list$ 'if (getpath(["data"]) | has("items")) then (setpath(["data","items"]; [])) else . end'
+^https:\/\/so\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/notes url jsonjq-response-body .data.items |= map(select(.note?.type == "normal"))
+^https:\/\/rec\.xiaohongshu\.com\/api\/sns\/v\d+\/homefeed url jsonjq-response-body .data |= map(select(.type == "normal"))
+
+[Map Local]
+// 滴滴出行 - 112.53.55.225, 113.46.225.*, 116.85.*, 120.241.142.*, 120.241.143.*, 123.207.209.*, 139.199.240.84, 162.14.157.*, api.udache.com, As.xiaojukeji.com, common.diditaxi.com.cn, conf.diditaxi.com.cn, ct.xiaojukeji.com, lion.didialift.com, res.xiaojukeji.com
+^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/lion\.didialift\.com\/broker\/\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/other\/slow\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/poi\.map\.xiaojukeji\.com\/mapapi\/recommend\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+// 交管12123 - gab.122.gov.cn
+^https?:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+// 微信 - mp.weixin.qq.com
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/cps_product_info\?action data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+// 携程旅行 - m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com
+^https?:\/\/ma-adx\.ctrip\.com\/_ma\.gif data-type=text data="{}" status-code=200 header="Content-Type:image/gif"
+^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/13916\/json\/tripAds data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https?:\/\/mbd\.baidu\.com\/newspage\/api\/getmobads\?page\=landingshare data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+// 掌上公交 - *
+^https?:\/\/quanguo\.mygolbs\.com:8081\/MyBusServer\/servlet\/MyGoServer\.HttpPool\.HttpHandlerServlet data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+// 广州地铁乘车码(微信小程序) - apis.alenable.com
+^https:\/\/apis\.alenable\.com\/mall\/v1\/api\/mall\/skin\/user\/get data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/apis\.alenable\.com\/ycx\/v1\/api\/adPut data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+// 街电(微信小程序) - s.jiediankeji.com
+^https:\/\/s\.jiediankeji\.com\/adv data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+// 肯德基(微信小程序) - orders.kfc.com.cn,dynamicad.kfc.com.cn,res.kfc.com.cn
+^https:\/\/orders\.kfc\.com\.cn\/preorder-portal\/api\/v2\/(coupon|activity) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/dynamicad\.kfc\.com\.cn\/api data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/custom_v2\/wxapp data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+// 麦当劳(微信小程序) - api.mcd.cn
+^https:\/\/api\.mcd\.cn\/bff\/portal\/home\/hotActivity data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+// 美团充电宝(微信小程序) - cdb.meituan.com
+^https:\/\/cdb\.meituan\.com\/marketing\/source\/getPageSlotList data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+// 深圳通(微信小程序) - ecard.shenzhentong.com
+^https?:\/\/ecard\.shenzhentong\.com\/wxweb\/bwxppub2\/QryAdvertList\.do data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+// 腾讯乘车码(微信小程序) - ccmsupport-sz.tenpay.com
+^https:\/\/ccmsupport-sz\.tenpay\.com\/cgi-bin\/common\/ccm_page_element.cgi data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% 112.53.55.225, 113.46.225.*, 116.85.*, 120.241.142.*, 120.241.143.*, 123.207.209.*, 139.199.240.84, 162.14.157.*, api.live.bilibili.com, api.mcd.cn, api.udache.com, apis.alenable.com, app.bilibili.com, as.xiaojukeji.com, cdb.meituan.com, ccmsupport-sz.tenpay.com, common.diditaxi.com.cn, conf.diditaxi.com.cn, ct.xiaojukeji.com, dynamicad.kfc.com.cn, ecard.shenzhentong.com, edith.xiaohongshu.com, gab.122.gov.cn, lion.didialift.com, m.ctrip.com, ma-adx.ctrip.com, mbd.baidu.com, mp.weixin.qq.com, orders.kfc.com.cn, rec.xiaohongshu.com, res.kfc.com.cn, res.xiaojukeji.com, s.jiediankeji.com, www.itdog.cn
