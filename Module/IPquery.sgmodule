@@ -1,0 +1,10 @@
+#!name=IPquery
+#!desc=IPquery
+#!system=ios
+#!updatetime=2025-12-20 20:09
+
+[Panel]
+IPquery = script-name=IPquery, style=info, update-interval=-1
+
+[Script]
+IPquery = type=generic,timeout=10,argument={{{MarkIP}}},script-path=https://raw.githubusercontent.com/Shayupepper/ruleset/master/Script/IPquery.js,script-update-interval=-1
