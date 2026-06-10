@@ -1,0 +1,11 @@
+#!name=IPquery
+#!desc=IPquery
+#!system=ios
+#!arguments=组名称:必填,MaskIP:默认关闭 开启 1
+#!updatetime=2025-12-05 16:44
+
+[Panel]
+IPquery = script-name=IPquery, style=info, update-interval=-1
+
+[Script]
+IPquery = type=generic, timeout=10, argument=group={{{组名称}}}&MaskIP={{{MaskIP}}}, script-path=IPquery_en.js, script-update-interval=-1
