@@ -1,0 +1,10 @@
+#!name=Sub-Store
+#!desc=Sub-Store
+#!system=ios
+#!updatetime=2024-02-08 10:34
+
+[Script]
+Sub-Store = type=http-request, pattern=^https?:\/\/sub\.store,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store.min.js, requires-body=1, timeout=120, max-size=131072, binary-body-mode=0, script-update-interval=-1
+
+[MITM]
+hostname = %APPEND% sub.store
